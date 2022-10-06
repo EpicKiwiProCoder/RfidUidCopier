@@ -15,8 +15,6 @@ void setup() {
   while (!Serial);     
   SPI.begin();         
   mfrc522.PCD_Init();  
-  Serial.println(F("Warning: this example overwrites the UID of your UID changeable card, use with care!"));
-  
   
   for (byte i = 0; i < 6; i++) {
     key.keyByte[i] = 0xFF;
